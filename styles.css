@@ -288,7 +288,7 @@ footer {
 .footer-links a:hover, .footer-links a:focus-visible { color: #68bdf0; }
 .legal-main { overflow: visible; }
 .legal-content { max-width: 890px; padding: 90px 28px 105px; margin: 0 auto; }
-.legal-content h1 { font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: 1.12; letter-spacing: -0.025em; overflow-wrap: anywhere; }
+.legal-content h1 { font-size: clamp(1.4rem, 5.2vw, 3.6rem); line-height: 1.2; letter-spacing: 0.005em; hyphens: none; word-break: normal; overflow-wrap: normal; }
 .legal-lead { font-size: 1.15rem; color: #c4d2dc; max-width: 690px; }
 .legal-date { font-size: 0.84rem; color: #aebbc5; margin: 20px 0 50px; }
 .legal-content section { margin: 38px 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.09); }
@@ -300,6 +300,28 @@ footer {
 
 /* Custom Vector Airspace typefaces: wide headlines, regular navigation and labels. */
 .brand { letter-spacing: 0.14em; }
-h1, h2, h3 { font-weight: 700; letter-spacing: 0.015em; overflow-wrap: anywhere; }
+h1, h2, h3 { font-weight: 700; letter-spacing: 0.015em; hyphens: none; word-break: normal; overflow-wrap: normal; }
 .eyebrow, .section-label { font-family: "Vectored Aero", "Inter", sans-serif; letter-spacing: 0.15em; }
-@media (max-width: 700px) { h1 { font-size: clamp(2.4rem, 11vw, 4rem); } }
+
+/* The custom headline face is exceptionally wide. Size it to preserve whole words. */
+.hero h1 {
+  font-size: clamp(1.2rem, 6.8vw, 4.6rem);
+  line-height: 1.12;
+  max-width: 850px;
+}
+.section h2 {
+  font-size: clamp(1.5rem, 4.2vw, 3rem);
+  line-height: 1.2;
+}
+.product-card h3 {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  line-height: 1.25;
+}
+.legal-content h2 { hyphens: none; word-break: normal; overflow-wrap: normal; }
+@media (max-width: 700px) {
+  .nav { flex-wrap: wrap; gap: 14px; }
+  .nav nav { flex-wrap: wrap; gap: 10px 16px; }
+  .brand { font-size: .88rem; }
+  .legal-content h1 { font-size: clamp(1.4rem, 6.8vw, 2.4rem); }
+}
+
