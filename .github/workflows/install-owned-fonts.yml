@@ -29,5 +29,6 @@ jobs:
           git add fonts/VectoredAeroWide-Bold.otf fonts/VectoredAero-Regular.otf
           if ! git diff --cached --quiet; then
             git commit -m "Install custom Vectored Aero website fonts"
+            git pull --rebase origin main
             git push
           fi
