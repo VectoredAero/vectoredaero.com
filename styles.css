@@ -347,3 +347,12 @@ h1, h2, h3 { font-weight: 700; letter-spacing: 0.015em; hyphens: none; word-brea
     line-height: 1.25;
   }
 }
+
+/* Keep the custom product lettering, but use unmistakable numerals for 214. */
+.product-card h3 .clear-numerals {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 700;
+  font-variant-numeric: lining-nums;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
